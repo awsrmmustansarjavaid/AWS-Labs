@@ -116,7 +116,7 @@ For S3:
 
 
 ### **3. Add EC2 Userdata**
-
+```
 #!/bin/bash
 yum update -y
 yum install -y httpd php php-mysqli
@@ -177,7 +177,7 @@ chown apache:apache /var/www/html/api.php
 
 # Restart Apache to apply changes
 systemctl restart httpd
-
+```
 
 ### **2. Test EC2 Userdata**
 
