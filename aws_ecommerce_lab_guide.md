@@ -116,6 +116,7 @@ For S3:
 
 
 ### **3. Add EC2 Userdata**
+
 ```
 #!/bin/bash
 yum update -y
@@ -346,6 +347,7 @@ Save the **CloudFront URL**.
 ### **3. Create Table**
 Run in RDS Query Editor or EC2:
 
+```
 sudo dnf update -y
 
 sudo dnf install mariadb105 -y
@@ -374,6 +376,7 @@ INSERT INTO products (name, price, description) VALUES
 SHOW TABLES;
 
 SELECT * FROM products;
+```
 
 ------------------------------------------------------ END---------------------------------------------
 
@@ -450,7 +453,7 @@ echo json_encode($products);
 
 $conn->close();
 ?>
-
+```
 
 ### **4.Save the file → restart Apache
 sudo systemctl restart httpd
@@ -693,7 +696,7 @@ curl -I http://localhost/api.php
 
 
 ### **1. index.html (S3 Frontend)**
-
+```
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -854,7 +857,7 @@ curl -I http://localhost/api.php
 
 </body>
 </html>
-
+```
 ------------
 
 ### **2. api.php (EC2 Backend)**
@@ -900,7 +903,7 @@ echo json_encode($products);
 
 $conn->close();
 ?>
-
+```
 
 ------------------------------------------------------ END---------------------------------------------
 ---
